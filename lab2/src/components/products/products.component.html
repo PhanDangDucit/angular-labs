@@ -1,0 +1,28 @@
+<app-filter-products [(query)]="initQuery" [products]="products"></app-filter-products>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Product</th>
+            <th scope="col">Code</th>
+            <th scope="col">Available</th>
+            <th scope="col">Price</th>
+            <th scope="col">5 Star Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products; track product.productId) {
+            <tr>
+                <th scope="row">
+                    <img src={{product.imageUrl}} alt=""/>
+                </th>
+                <th>{{product.productName}}</th>
+                <td>{{product.productCode}}</td>
+                <td>{{product.releaseDate}}</td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.starRating}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

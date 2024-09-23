@@ -19,9 +19,18 @@
                 <th>{{product.productName}}</th>
                 <td>{{product.productCode}}</td>
                 <td>{{product.releaseDate}}</td>
-                <td>{{product.productCode}}</td>
                 <td>{{product.price}}</td>
-                <td>{{product.starRating}}</td>
+                <td>
+                    <div class="crop" [style.width.px]="product.starRating*90/5" title="rating">
+                        <div class="box-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </td>
             </tr>
         }
     </tbody>

@@ -1,5 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ProductServiceService } from '../../services/product-service.service';
+import { Products } from '../../types';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,8 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  housingLocationId = -1;
+  productService =  inject(ProductServiceService);
+  productId = -1;
+  products = this.productService.getAll();
+  product: Products;
   constructor() {
-    this.housingLocationId = Number(this.route.snapshot.params['id']);
+    this.productId = Number(this.route.snapshot.params['id']);
+    this.product = this.products.find(p => p.productId === this.productId)!;
   }
 }

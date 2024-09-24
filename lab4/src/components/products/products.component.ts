@@ -3,11 +3,12 @@ import { Products } from '../../types';
 import { ProductServiceService } from '../../services/product-service.service';
 import { FilterProductsComponent } from '../filter-products/filter-products.component';
 import { StarComponent } from '../star/star.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [FilterProductsComponent, StarComponent],
+  imports: [RouterLink, FilterProductsComponent, StarComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })

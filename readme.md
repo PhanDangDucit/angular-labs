@@ -9,4 +9,10 @@ $ ng generate interface <interface_name>
 
 $ ng generate service <service_name> --skip-tests
 
+$ ng new routing-app
+
 ```
+
+# Routing
+
+- routerLink: is imported into component that use router

@@ -17,7 +17,7 @@
                 <th scope="row">
                     <img src={{product.imageUrl}} alt=""/>
                 </th>
-                <th>{{product.productName}}</th>
+                <th><a class="text-black nav-link" routerLink="/product-detail/{{product.productId}}">{{product.productName}}</a></th>
                 <td>{{product.productCode}}</td>
                 <td>{{product.releaseDate}}</td>
                 <td>{{product.price}}</td>

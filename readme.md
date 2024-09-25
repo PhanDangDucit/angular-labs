@@ -18,3 +18,8 @@ $ npm install datatables.net-dt
 # Routing
 
 - routerLink: is imported into component that use router
+
+
+- [Angular Routing Essentials: All You Need to Know in One Video!](https://www.youtube.com/watch?v=BUDQTd1DQAg&ab_channel=MonsterlessonsAcademy)
+
+- [From Good to Great: Optimizing Angular Performance](https://www.youtube.com/watch?v=tMxrY7IL-Ac)

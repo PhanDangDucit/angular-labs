@@ -16,3 +16,9 @@ export interface Products {
     starRating: number;
     imageUrl: string;
 }
+
+export interface Users {
+    id: string;
+    username: string;
+    password: string;
+}

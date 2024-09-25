@@ -34,7 +34,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",  
               "src/styles.css",
-              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+              "https://cdn.lineicons.com/4.0/lineicons.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

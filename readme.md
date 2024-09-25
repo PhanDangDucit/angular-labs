@@ -11,6 +11,8 @@ $ ng generate service <service_name> --skip-tests
 
 $ ng new routing-app
 
+
+$ npm install datatables.net-dt
 ```
 
 # Routing

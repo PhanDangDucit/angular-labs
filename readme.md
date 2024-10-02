@@ -13,6 +13,9 @@ $ ng new routing-app
 
 
 $ npm install datatables.net-dt
+
+# generate environment
+$ ng generate environments
 ```
 
 # Routing

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="">
+        <form
+            [formGroup]="loginForm"
+            (ngSubmit)="login()"
+            class=""
+            id="side2"
+        >
+            <h3>Login Account</h3>
+            <div class="">
+                <input type="text" class="p-1" placeholder="User Name or email" required formControlName="usernameForm">
+                <div 
+                    *ngIf="!usernameForm?.valid && (usernameForm?.dirty || usernameForm?.touched)"
+                    class="error-validation"
+                >
+                    Username is invalid!
+                </div>
+                <input type="password" class="p-1" placeholder="Password" required formControlName="passwordForm">
+                <div 
+                    *ngIf="passswordForm?.invalid && (passswordForm?.dirty || passswordForm?.touched)"
+                    class="error-validation"
+                >
+                    Password is invalid!
+                </div>
+            </div>
+            <div id="login">
+                <button type="submit" >LOG IN</button>
+            </div>
+        </form>
+    </div>
+</div>

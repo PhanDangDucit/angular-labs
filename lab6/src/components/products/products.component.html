@@ -1,0 +1,30 @@
+<h1>Rating of product is: {{starOfProduct}}</h1>
+<app-filter-products [(query)]="initQuery" [products]="products"></app-filter-products>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Product</th>
+            <th scope="col">Code</th>
+            <th scope="col">Available</th>
+            <th scope="col">Price</th>
+            <th scope="col">5 Star Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products; track product.productId) {
+            <tr>
+                <th scope="row">
+                    <img src={{product.imageUrl}} alt=""/>
+                </th>
+                <th><a class="text-black nav-link" routerLink="/product-detail/{{product.productId}}">{{product.productName}}</a></th>
+                <td>{{product.productCode}}</td>
+                <td>{{product.releaseDate}}</td>
+                <td>{{product.price}}</td>
+                <td>
+                    <app-star [starRating]="product.starRating" (newStarEvent)="showStar(product.starRating)"></app-star>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
